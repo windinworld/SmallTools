@@ -1,0 +1,53 @@
+1. 用find命令找到/abc目录中大于1M的文件
+find /abc -size +1024k
+2. 将/abc目录的文件列表定向到文件file.list中
+ls /abc > file.list
+3. 用ls显示出文件abc.txt的大小
+ls -l abc.txt
+4. date命令显示utc格式的时间
+date +%Y%m%dT%H%M%SZ
+5. 搜索文件abc.txt中是否含有字符test
+grep -P "\btest\b" test
+
+NHT_OLTP_Schema_Convention
+
+1. Which’s the master DB box?
+OLTPdb01.fwmrm.net
+2. Which db box you could login when you want to perform a testing query?
+PEKdev030.dev.fwmrm.net 
+3. How to specify character set when you execute sql?
+execute sql file
+Better to use: mysql -hXXX -uXXX -p [database] --default-character-set=utf8 < your_sql_file.sql
+If you need to "source your_sql_file.sql", please:
+mysql> tee OPS-XXX.log
+mysql> use [database];
+mysql> set names utf8;
+mysql> source /path/your_sql_file.sql
+mysql> exit
+
+
+
+
+
+
+test asdfaslf testa
+asdfasf asdfa test sasdtest
+
+5. 搜索文件abc.txt中是否含有字符test
+grep -P "\btest\b" test
+
+NHT_OLTP_Schema_Convention
+
+1. Which’s the master DB box?
+OLTPdb01.fwmrm.net
+2. Which db box you could login when you want to perform a testing query?
+PEKdev030.dev.fwmrm.net
+3. How to specify character set when you execute sql?
+execute sql file
+Better to use: mysql -hXXX -uXXX -p [database] --default-character-set=utf8 < your_sql_file.sql
+If you need to "source your_sql_file.sql", please:
+mysql> tee OPS-XXX.log
+mysql> use [database];
+mysql> set names utf8;
+mysql> source /path/your_sql_file.sql
+mysql> exit
